@@ -1,20 +1,21 @@
+# deploying for my local instance
 
 - Ubuntu 18.04.2 / x86_64
 - nodejs v12.0
-<pre>
+```
  # Using Ubuntu
  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
  sudo apt-get install -y nodejs
  npm install
-</pre>
+```
 - edit config files
--- config/caps.json
--- config/public.json
--- config/private.json
--- config/probe.json
+ - config/caps.json
+ - config/public.json
+ - config/private.json
+ - config/probe.json
 - edit index.html
 To provide by http(not https), download some *.js/*.ccs on local storage and edited index.html
-<pre>
+```
  mkdir static/localcache
  cd static/localcache
  wget https://nodejs.org/download/release/v12.0.0/node-v12.0.0-linux-x64.tar.gz
@@ -28,7 +29,7 @@ To provide by http(not https), download some *.js/*.ccs on local storage and edi
  wget https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js
  wget https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js
  wget https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.7.0/js/md5.min.js
-</pre>
+```
 
 These procedures can't follow to update origin. I should check them when pull update.
 
