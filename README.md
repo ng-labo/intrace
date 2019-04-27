@@ -6,14 +6,17 @@
  # Using Ubuntu
  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
  sudo apt-get install -y nodejs
+ (cd intrace)
  npm install
 ```
 - prepare ssh keys
 - edit config files
- -- config/caps.json
- -- config/public.json
- -- config/private.json
- -- config/probe.json
+```
+ vi config/caps.json
+ vi config/public.json
+ vi config/private.json
+ vi config/probe.json
+```
 
 - edit index.html
 To provide by http(not https), download some *.js/*.ccs on local storage and edited index.html
