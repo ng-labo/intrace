@@ -5,7 +5,12 @@
 var async         = require('async');
 var ipaddrjs      = require('ipaddr.js');
 var child_process = require('child_process');
-var http          = require('http');
+var http          = require('https');
+var fs = require("fs");
+const options = {
+  key: fs.readFileSync("./ssl/server.key"),
+  cert: fs.readFileSync("./ssl/server.crt")
+};
 var express       = require('express');
 var socketio      = require('socket.io');
 var crc32         = require('crc-32');
@@ -15,7 +20,7 @@ var RateLimiter   = require('express-rate-limit');
 
 var app = express();
 app.enable('trust proxy', '0.0.0.0/0');
-var server = http.createServer(app);
+var server = http.createServer(options, app);
 var io = socketio(server);
 
 var is_bogon_v4 = require('./libs/is_bogon_v4.js');
