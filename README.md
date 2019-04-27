@@ -1,4 +1,5 @@
 # deploying for my local instance
+Given [original README](https://github.com/Fusl/intrace), additioanl procedures are following.
 
 - Ubuntu 18.04.2 / x86_64
 - nodejs v12.0
