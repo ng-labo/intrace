@@ -8,11 +8,13 @@
  sudo apt-get install -y nodejs
  npm install
 ```
+- prepare ssh keys
 - edit config files
- - config/caps.json
- - config/public.json
- - config/private.json
- - config/probe.json
+ -- config/caps.json
+ -- config/public.json
+ -- config/private.json
+ -- config/probe.json
+
 - edit index.html
 To provide by http(not https), download some *.js/*.ccs on local storage and edited index.html
 ```
